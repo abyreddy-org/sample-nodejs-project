@@ -1,0 +1,19 @@
+name: Black Duck Polaris
+    on:
+      push:
+        branches:
+          - main
+      pull_request:
+        branches:
+          - main
+    jobs:
+        sca:
+          steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            - name: Polaris Scan
+              uses: blackduck-inc/black-duck-security-scan@v2.1.1
+              env:
+                polaris_server_url: ${{ vars.POLARIS_SERVER_URL }}
+                polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
+                polaris_assessment_types: "SCA,SAST"
