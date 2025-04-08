@@ -1,0 +1,21 @@
+name: Black Duck SCA
+'on':
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  blackduck-sca:
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Black Duck SCA Scan
+        uses: blackduck-inc/black-duck-security-scan@v2.1.1
+        with:
+          blackducksca_url: ${{ vars.BLACKDUCK_URL }}
+          blackducksca_token: ${{ secrets.BLACKDUCK_TOKEN }}
+          hello: world
