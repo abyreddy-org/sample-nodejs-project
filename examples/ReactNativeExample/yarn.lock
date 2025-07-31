@@ -5524,7 +5524,7 @@ pretty-format@^29.7.0:
     react-is "^18.0.0"
 
 process-nextick-args@~2.0.0:
-  version "2.0.1"
+  version "2.0.2"
   resolved "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
